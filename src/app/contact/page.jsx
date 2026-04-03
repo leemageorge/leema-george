@@ -1,0 +1,70 @@
+import Image from "next/image";
+import React from "react";
+import handshake from "../../assets/handshakebg.png";
+import { Mail, Map, Phone } from "lucide-react";
+import {Luckiest_Guy } from "next/font/google";
+
+
+
+const luckiest = Luckiest_Guy({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const ContactPage = () => {
+  return (
+    <div className="min-h-screen bg-linear-to-br p-6  from-cyan-900/90  via-black to-cyan-900/90 overflow-hidden flex items-center justify-center pt-120 lg:pt-96 pb-40">
+      <div className="relative container max-w-7xl px-10 py-24 lg:px-16 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-black/10 backdrop-blur-3xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+        <div className="w-full p-5 lg:w-3/4 -mt-96 lg:-mt-125 shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335]  flex flex-col space-y-6 hover:shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335] ">
+          <div className="w-48 h-48 ">
+            <Image
+              src={handshake}
+              alt="handshake"
+              className="w-full h-full object-cover rounded-2xl transition duration-500 group-hover:scale-105"
+            />
+          </div>
+          <h2 className={`text-white text-xl lg:text-2xl font-bold uppercase tracking-widest ${luckiest.className}`}>
+            Let's Build
+            <span className="inline-block bg-linear-to-br from-cyan-400  to-purple-400 bg-clip-text text-transparent">{""} Something Great</span>
+            </h2>
+          <p className="text-white leading-7 italic">
+            I’m Leema George — a web developer focused on crafting fast, modern,
+            and user-centered digital experiences. Let’s collaborate and turn
+            your ideas into reality.
+          </p>
+          <div className="text-white flex justify-start gap-4">
+            <Mail />
+            <span>leemageorge.job@gmail.com</span>
+          </div>
+          <div className="text-white flex gap-4">
+            <Phone />
+            <span>+91 9633443047</span>
+          </div>
+          <div className="text-white flex gap-4">
+            <Map />
+            <span>Kochi,Kerala</span>
+          </div>
+        </div>
+
+         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl hover:shadow-blue-500/20 transition duration-500">
+            <h3 className={`${luckiest.className} mb-6 bg-linear-to-br from-cyan-400 to-purple-400 bg-clip-text text-transparent text-2xl`}>Start a project</h3>
+            <form className="space-y-3">
+                <input type="text" placeholder="Name"
+                className="bg-black/50 text-white placeholder:text-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 w-full rounded-lg px-4 py-3"/>
+                <input type="email"  placeholder="Email"
+                className="bg-black/50 text-white placeholder:text-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 w-full rounded-lg px-4 py-3"/>
+                <input type="text"  placeholder="Phone"
+                className="bg-black/50 text-white placeholder:text-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 w-full rounded-lg px-4 py-3"/>
+                <textarea  placeholder="Tell me about your project..." rows={5} resize="none"
+                className="bg-black/50 text-white placeholder:text-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 w-full rounded-lg px-4 py-3"/>
+            </form>
+            <div className="flex justify-center ">
+            <button className="mt-6 cursor-pointer shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335] hover:shadow-[2px_2px_3px_#060365,-2px_-2px_-5px_#081335] bg-white/10 border border-white/10 px-6 py-2 rounded-xl text-white capitalize font-bold hover:border-cyan-400 ">send Message</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  );                      
+};
+
+export default ContactPage;       

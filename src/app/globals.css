@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.water-text{
+    background: linear-gradient(270deg,#dddce0,#ebecee,#e2dde2);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation:waterFlow 6s ease infinite,floatText 4s ease-in-out infinite
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
+@keyframes waterFlow{
+    0%{
+        background-position: 0% 50%;;
+    }
+    50%{
+        background-position: (50%,100%);
+    }
+    100%{
+        background-position: (0%,50%);
+    }
+}
+@keyframes floatText{
+    0%,100%{
+        transform:translateY(0%)
+    }
+    50%{
+        transform:translateY(-20px)
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base{
+  
+    .clip-path{
+        clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 73%);
+    }
+    .clip-frame{
+        clip-path: polygon(40% 17%, 100% 0, 100% 100%, 0 100%);
+    }
+    .parallax-bg{
+        background-image: url("../assets/about.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;    
+    }
 }
