@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronRight } from "lucide-react";
 import about from "../assets/about1.png";
 import Image from "next/image";
@@ -23,7 +25,12 @@ const AboutMe = () => {
       <div className="relative z-10 container max-w-7xl px-10 lg:px-6 mx-auto  ">
        
         <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-8 items-center">
-          <div className="text-white space-y-4">
+          <motion.div className="text-white space-y-4"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false }}
+          >
              <h2
               className={`${caveat.className} text-3xl text-white md:text-4xl font-bold italic`}
             >
@@ -56,16 +63,20 @@ const AboutMe = () => {
                 <ChevronRight className="text-white" />
               </a>
             </p>
-          </div>
+          </motion.div>
 
-          <div className="relative"
+          <motion.div className="relative"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
         >
             <Image
               src={about}
               alt="about"
               className="w-full h-auto rounded-lg shadow-lg "
             />
-          </div>
+          </motion.div>
         </div>
         <WhatIDo />
       </div>
@@ -74,4 +85,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-       
+          

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { projectsList } from "@/data/data";
 import { Caveat, Luckiest_Guy } from "next/font/google";
@@ -22,7 +22,11 @@ const ProjectCarousel = () => {
   return (
     <div className="w-full bg-linear-to-br from-cyan-800/90 via-black to-cyan-900/90 relative py-16  ">
       <div className="container mx-auto max-w-7xl  px-10 lg:px-6 relative z-10">
-        <h2
+        <motion.h2
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false }}
           className="
           text-center
           text-[50px] lg:text-[150px]
@@ -35,13 +39,17 @@ const ProjectCarousel = () => {
           z-0
           [-webkit-text-stroke:2px_rgba(255,255,255,0.4)]">
           my works
-        </h2>
-        <h2
+        </motion.h2>
+        <motion.h2
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: false }}
           className={`${caveat.className} mb-10 text-center text-2xl md:text-4xl text-white`}
         >
           Looking for creative and responsive web design? I can help bring your
           ideas to life.
-         </h2>
+         </motion.h2>
         <Swiper
           modules={[Autoplay, EffectCoverflow]}
           effect="coverflow"
@@ -94,10 +102,10 @@ const ProjectCarousel = () => {
                       className="object-cover rounded-5xl "
                     />
                   </div>
-                    <h2 className="text-gray-400">{project.desc}</h2>
-                  <div className="p-4 text-white text-center text-xl upper bg-white/5 backdrop-blur-md">
+                   
+                  <h2 className="p-4 text-white text-center text-xl upper bg-linear-to-br from-cyan-500/60 to-purple-500/60 font-bold uppercase shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335]  hover:shadow-[2px_2px_3px_#060365,-2px_-2px_-5px_#081335] transition-colors duration-300">
                     Click to view
-                  </div>
+                  </h2>
                 </Link>
               )}
             </SwiperSlide>
@@ -109,4 +117,4 @@ const ProjectCarousel = () => {
 };
 
 export default ProjectCarousel;
- 
+    

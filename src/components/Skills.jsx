@@ -1,13 +1,19 @@
+'use client'
 import { skillCategory } from "@/data/data";
 import React from "react";
-
+import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <section className="relative bg-linear-to-br from-blue-950 via-black to-blue-950 py-18 overflow-hidden ">
       <div className="absolute top-10 left-10 w-100 h-100 bg-cyan-500/20 blur-[120px] " />
       <div className="absolute bottom-10 right-10 w-100 h-100 bg-purpel-500/20" />
       <div className="container max-w-7xl mx-auto px-10 lg:px-6 relative z-10">
-        <h2
+        <motion.h2
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }} 
+        viewport={{once : false}}
+
           className="
     
     text-center
@@ -23,17 +29,27 @@ const Skills = () => {
   "
         >
           skills i have
-        </h2>
+        </motion.h2>
         <div className="text-center mb-16">
-          <p
+          <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }} 
+          viewport={{once : false}}
             className={`text-xl md:text-2xl text-cyan-400 capitalize italic font-black [-webkit-text-stroke:1px_rgba(255,255,255,0.2)]`}
           >
             Technologies i use to build modern web experience
-          </p>
+          </motion.p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div
+      
+         className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {skillCategory.map((category, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, rotate: 10, scale: 0.9   }}
+        whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }} 
+        viewport={{once : false}}
               key={index}
               className="group p-[1px] rounded-lg bg-linear-to-br from-cyan-500/30 to-purple-500/30 hover:bg-linear-to-br hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 "
             >
@@ -53,7 +69,7 @@ const Skills = () => {
                   ck
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -62,3 +78,4 @@ const Skills = () => {
 };
 
 export default Skills;
+              

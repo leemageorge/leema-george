@@ -43,7 +43,7 @@ const Hero = () => {
               key={item.name}
               href={item.url}
               target="_blank"
-              className="invert brightness-0"
+              className="invert"
             >
               <Image
                 src={item.icon}
@@ -116,13 +116,13 @@ const Hero = () => {
               key={item.name}
               href={item.url}
               target="_blank"
-              className="invert brightness-0"
+              className="invert"
             >
               <Image
                 src={item.icon}
                 alt={item.name}
-                width={35}
-                height={35}
+                width={50}
+                height={50}
                 className="object-contain"
               />
             </Link>

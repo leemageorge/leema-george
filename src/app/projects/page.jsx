@@ -5,10 +5,10 @@ import React from 'react'
 
 const ProjectsPage = () => {
   return (
-    <div className='relative py-24 bg-black'>
+    <div className='relative py-24 bg-black overflow-hidden min-h-screen '>
       <div className='absolute inset-0 bg-linear-to-br from-cyan-900/90 via-black  to-cyan-900/90'></div>
         <div className='container max-w-7xl px-10 lg:px-6 mx-auto relative z-10 '>
-             <h2 className='text-7xl lg:text-9xl font-bold uppercase text-gray-400 tracking-widest text-center'>Projects</h2>
+             <h2 className='text-5xl lg:text-7xl font-bold uppercase text-gray-400 tracking-widest text-center'>Projects</h2>
                <p className="text-center text-gray-400 italic mt-4 text-md lg:text-xl">
           Real work Real performance Real results.
         </p>

@@ -9,7 +9,7 @@ import { MenuIcon, X } from "lucide-react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="fixed top-0 left-0 right-0 overflow-y--hidden z-50 bg-blue-950/20 backdrop-blur-lg border-b border-purple-500 ">
+    <div className="fixed top-0 left-0 right-0 overflow-y-hidden z-50 bg-blue-950/20 backdrop-blur-lg border-b border-purple-500 ">
       <div className="max-w-7xl mx-auto px-2 lg:px-6 ">
         <div className="flex items-center justify-between">
        <Link href={"/"}>
@@ -50,7 +50,7 @@ const Navbar = () => {
               className="flex flex-col items-center justify-center gap-6"
               key={index}
             >
-              <Link
+              <Link onClick={()=>setIsMenuOpen(false)}
                 href={link.href}
                 className="text-white text-3xl"
               >
@@ -71,3 +71,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+  

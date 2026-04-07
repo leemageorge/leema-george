@@ -7,7 +7,7 @@ import "swiper/css/effect-cards";
 import { Autoplay, EffectCards } from "swiper/modules";
 import { feedback } from "@/data/data";
 import { Quote,ArrowRight } from "lucide-react";
-
+import { motion } from "framer-motion";
 const Testimonials = () => {
   return (
     <section className="relative py-36 bg-black overflow-hidden ">
@@ -21,13 +21,23 @@ const Testimonials = () => {
             className=" absolute -top-30 left-10  text-cyan-400 opacity-40  "
           />
            
-          <h2 className={`text-2xl  md:text-5xl text-transparent font-serif capitalize [-webkit-text-stroke:1px_rgba(255,255,255,1)] mb-6 shadow-[0_1px_0_rgba(255,255,255,0.1)]`}>
+          <motion.h2 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false }}
+          className={`text-2xl  md:text-5xl text-transparent font-serif capitalize [-webkit-text-stroke:1px_rgba(255,255,255,1)] mb-6 shadow-[0_1px_0_rgba(255,255,255,0.1)]`}>
             
             Building trust through successful project delivery
-          </h2>
-          <p className="text-xl md:text-2xl text-white/80 italic">
+          </motion.h2>
+          <motion.p
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false }}
+          className="text-xl md:text-2xl text-white/80 italic">
             Focused on delivering quality, performance, and real results →
-          </p>
+          </motion.p>
           <Quote
             size={80}
             className=" absolute -bottom-30 right-10 text-cyan-400 opacity-40  "
