@@ -103,9 +103,9 @@ const Hero = () => {
             <Link
               href="/projects"
               target="_blank"
-              className="px-12 py-6 md:px-20 md:py-12 border border-white text-xl tracking-wider text-white rounded-full font-bold uppercase transition inline-block cursor-pointer text-center bg-white/10 hover:bg-clip-text hover:text-transparent hover:bg-linear-to-br hover:from-cyan-400 hover:to-purple-400"
+              className="px-12 py-6 md:px-16 md:py-12 border border-white text-xl tracking-wider text-white rounded-full font-bold uppercase transition inline-block cursor-pointer text-center bg-white/10 hover:bg-clip-text hover:text-transparent hover:bg-linear-to-br hover:from-cyan-400 hover:to-purple-400"
             >
-              View My Projects →
+              View My Works →
             </Link>
           </div>
         </div>
