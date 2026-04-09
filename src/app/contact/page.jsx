@@ -5,7 +5,7 @@ import handshake from "../../assets/handshakebg.png";
 import { Mail, Map, Phone } from "lucide-react";
 import {Luckiest_Guy } from "next/font/google";
 import emailjs from "@emailjs/browser";
-
+import { motion } from "framer-motion";
 
 const luckiest = Luckiest_Guy({
   subsets: ["latin"],
@@ -53,7 +53,12 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-linear-to-br p-6  from-cyan-900/90  via-black to-cyan-900/90 overflow-hidden flex items-center justify-center pt-120 lg:pt-96 pb-40">
       <div className="relative container max-w-7xl px-10 py-24 lg:px-16 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-black/10 backdrop-blur-3xl border border-white/10 rounded-2xl p-8 shadow-2xl">
-        <div className="w-full p-5 lg:w-3/4 -mt-96 lg:-mt-125 shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335]  flex flex-col space-y-6 hover:shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335] ">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: -100 }}
+            animate={{ opacity: 1,scale: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false }}
+         className="w-full p-5 lg:w-3/4 -mt-96 lg:-mt-125 shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335]  flex flex-col space-y-6 hover:shadow-[2px_3px_5px_#060d23,-2px_-3px_7px_#081335] ">
           <div className="w-48 h-48 ">
             <Image
               src={handshake}
@@ -82,9 +87,14 @@ const ContactPage = () => {
             <Map />
             <span>Kochi,Kerala</span>
           </div>
-        </div>
+        </motion.div>
 
-         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl hover:shadow-blue-500/20 transition duration-500">
+         <motion.div
+          initial={{ opacity: 0, scale: 0.8, x: -100 }}
+            animate={{ opacity: 1,scale: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false }}
+          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl hover:shadow-blue-500/20 transition duration-500">
             <h3 className={`${luckiest.className} mb-6 bg-linear-to-br from-cyan-400 to-purple-400 bg-clip-text text-transparent text-2xl`}>Start a project</h3>
             <form className="space-y-3" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Name" value={name} onChange={(e)=>setName(e.target.value)} required
@@ -101,7 +111,7 @@ const ContactPage = () => {
             </form>
            
          
-        </div>
+        </motion.div>
         {
           showDialogue && (
             <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm flex items-center justify-center">
@@ -116,7 +126,7 @@ const ContactPage = () => {
         }
       </div>
     </div>
-  );                      
+  );
 };
 
 export default ContactPage; 

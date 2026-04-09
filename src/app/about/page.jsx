@@ -1,23 +1,36 @@
+"use client"
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
 import React from "react";
 import Image from "next/image";
 import aboutdp from "../../assets/aboutdp.png";
-
+import { motion } from "framer-motion";
 const AboutPage = () => {
   return (
     <div className="min-h-screen  w-full relative pt-20 ">
       <div className="absolute inset-0 z-0 text-white bg-linear-to-br from-black  to-cyan-950/90" />
       <div className="container px-4 md:px-6 mx-auto relative py-24">
+        <div className="absolute -top-10 left-30 bg-purple-400/20 w-30 h-30 rounded-full opacity-45 "/> 
+          <div className="absolute -bottom-10 left-100%  bg-purple-400/20 w-30 h-30 rounded-full opacity-45 "/> 
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] justify-center gap-6 items-center ">
-          <div className="w-100 h-100 md:h-auto mx-auto p-10 shadow-[10px_10px_20px_#0a0f1f,-10px_-10px_20px_#1a2340] rounded-full">
+          <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false }}
+           className="w-100 h-100 md:h-auto mx-auto p-10 shadow-[10px_10px_20px_#0a0f1f,-10px_-10px_20px_#1a2340] rounded-full">
             <Image
               src={aboutdp}
               alt="about Image"
               className="w-full h-full object-cover rounded-full"
             />
-          </div>
-          <div className="shadow-[10px_10px_20px_#0a0f1f,-10px_-10px_20px_#1a2340] p-10 rounded-2xl space-y-4">
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false }}
+           className="shadow-[10px_10px_20px_#0a0f1f,-10px_-10px_20px_#1a2340] p-10 rounded-2xl space-y-4">
             <h2 className={` text-3xl text-transparent font-serif uppercase tracking-wider [-webkit-text-stroke:1px_rgba(255,255,255,1)]`}>About me</h2>
             <p className="text-gray-300 leading-7 text-md tracking-wider">
               I am a self-taught web developer experienced in building
@@ -46,7 +59,7 @@ const AboutPage = () => {
 
               </div>
             </div> */}
-          </div>
+          </motion.div>
         </div>
       </div>
       <Skills />

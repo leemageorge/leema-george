@@ -68,13 +68,13 @@ const Hero = () => {
           </motion.h3>
 
           <h1
-            className={`${luckiest.className} text-4xl md:text-8xl uppercase text-white tracking-wider water-text`}
+            className={`${luckiest.className} text-5xl md:text-8xl uppercase text-white tracking-wider water-text`}
           >
             Leema George
           </h1>
 
           <motion.h3
-            className="text-lg md:text-4xl font-black uppercase bg-linear-to-r from-purple-400 via-cyan-200 to-purple-600 bg-clip-text text-transparent"
+            className="text-2xl md:text-4xl font-black uppercase bg-linear-to-r from-purple-400 via-cyan-200 to-purple-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -82,7 +82,7 @@ const Hero = () => {
             Building Fast & Modern Web Experiences
           </motion.h3>
           <motion.div
-            className={`font-sans font-semibold text-gray-300 text-xl md:text-2xl space-y-2`}
+            className={`font-sans font-semibold text-gray-300 text-lg md:text-2xl space-y-2`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -96,7 +96,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="px-12 py-6 md:px-16  md:py-12 text-xl tracking-wider bg-linear-to-br from-cyan-500/60 to-purple-500/60 font-bold uppercase text-white rounded-full hover:from-cyan-600 via-75% hover:to-purple-600 transition inline-block cursor-pointer text-center"
             >
-              Let’s Build Your Website
+              Let's Connect →
             </Link>
 
             {/* View Projects */}
@@ -109,7 +109,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:hidden flex items-center justify-center gap-10 mt-20 opacity-60">
+        <div className="lg:hidden flex items-center justify-center gap-10 mt-20 opacity-80">
           <div className="w-20 h-1 bg-white "></div>
           {socialMediaIcons.map((item) => (
             <Link
@@ -121,8 +121,8 @@ const Hero = () => {
               <Image
                 src={item.icon}
                 alt={item.name}
-                width={50}
-                height={50}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </Link>
