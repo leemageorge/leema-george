@@ -18,8 +18,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Leema George",
-  description: "Frontend Developer, Web Developer",
+  title: "Leema George | Web Developer in Kochi",
+  description: "Building fast and modern SEO friendly Web Applications using React & Next.js ",
+  keywords: ["Best Affordable web Hosting","Top Web Developer in Kochi","Frontend Developer in kochi", "Web Developer near me", "React Developer in kochi", "Custom Web Development in kochi"],
 };
 
 export default function RootLayout({ children }) {
