@@ -22,7 +22,7 @@ const luckiest = Luckiest_Guy({
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden py-10 md:py-30">
+    <section className="relative min-h-screen flex items-center overflow-hidden mt-10 md:py-30">
        <div className="absolute inset-0 bg-linear-to-br from-blue-950 via-black to-cyan-800  z-0"></div>
          <div
         aria-hidden="true"
@@ -42,13 +42,13 @@ const Hero = () => {
               key={item.name}
               href={item.url}
               target="_blank"
-              className="invert"
+              className=" w-10 h-10 bg-cyan-100"
             >
               <Image
                 src={item.icon}
                 alt={item.name}
-                width={35}
-                height={35}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </Link>
@@ -58,7 +58,7 @@ const Hero = () => {
         {/* LEFT CONTENT */}
         <div className="space-y-5 text-center">
           <motion.h3
-            className={`${caveat.className} text-4xl md:text-6xl text-white/20 italic`}
+            className={`${caveat.className} text-4xl md:text-6xl text-white/55 italic`}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -73,7 +73,7 @@ const Hero = () => {
           </h1>
 
           <motion.h3
-            className="text-2xl md:text-4xl font-black uppercase text-white "
+            className="text-2xl md:text-4xl font-black uppercase bg-linear-to-br from-cyan-200 via-white to-cyan-950 bg-clip-text text-transparent "
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -108,7 +108,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:hidden flex items-center justify-center gap-10 mt-20 opacity-80">
+        <div className="lg:hidden flex items-center justify-center gap-2 mt-20 opacity-80">
           <div className="w-20 h-1 bg-white "></div>
           {socialMediaIcons.map((item) => (
             <Link
@@ -120,9 +120,8 @@ const Hero = () => {
               <Image
                 src={item.icon}
                 alt={item.name}
-                width={80}
-                height={80}
-                className="object-contain"
+               
+                className="object-cover"
               />
             </Link>
           ))}
