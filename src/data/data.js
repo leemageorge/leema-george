@@ -37,6 +37,7 @@ import Mtech from "../assets/mtechlab.webp"
 import Antz from "../assets/antz.png"
 import VastuConsultant from "../assets/vastuconsultant.webp"
 import ecommerceWebsite from "../assets/ecommerce.webp"
+
 export const liveprojectsList = [
  {
     title: "Starc Steel Windows & Doors",
@@ -113,7 +114,7 @@ export const demoprojectsList = [
    {
     title: "Vastu Consultant",
     image: VastuConsultant,
-    desc: "Clean and responsive website designed to showcase media content in a structured way.",
+    desc: "Professional Vastu consultation website designed to connect clients with expert guidance, personalized remedies, and harmonious living solutions.",
     tech: ["React.js", "Tailwind CSS"],
     highlights: [
       "Responsive layout",
@@ -125,7 +126,7 @@ export const demoprojectsList = [
    {
     title: "LeeTick",
     image: ecommerceWebsite,
-    desc: "Clean and responsive website designed to showcase media content in a structured way.",
+    desc: "Feature-rich e-commerce website built to deliver an engaging shopping experience with intuitive navigation, attractive product displays, and a smooth purchasing journey..",
     tech: ["React.js", "Tailwind CSS"],
     highlights: [
       "Responsive layout",

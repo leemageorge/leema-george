@@ -11,7 +11,7 @@ const Skills = () => {
         <motion.h2
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }} 
+        transition={{ duration: 0.5, ease: "easeInOut" }} 
         viewport={{once : false}}
 
           className="
@@ -49,7 +49,7 @@ const Skills = () => {
             <motion.div
               initial={{ opacity: 0, rotate: 10, scale: 0.9   }}
         whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }} 
+        transition={{ duration: 0.3, ease: "easeInOut",  }} 
         viewport={{once : false}}
               key={index}
               className="group p-[1px] rounded-lg bg-linear-to-br from-cyan-500/30 to-purple-500/30 hover:bg-linear-to-br hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 "
