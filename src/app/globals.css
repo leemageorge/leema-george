@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 .water-text{
-    background: linear-gradient(270deg,#dddce0,#ebecee,#e2dde2);
+    background:  linear-gradient(
+    90deg,
+    #00f5ff,
+    #0a0b42,
+    #c084fc,
+    #00f5ff
+  );;
+    /* background: linear-gradient(270deg,#03505c,#02292c,#a8f3ef); */
     background-size: 600% 600%;
     -webkit-background-clip: text;
     color: transparent;
+    text-fill-color: transparent;
     animation:waterFlow 6s ease infinite,floatText 4s ease-in-out infinite
 }
-
 
 
 @keyframes waterFlow{
@@ -39,9 +46,24 @@
         clip-path: polygon(40% 17%, 100% 0, 100% 100%, 0 100%);
     }
     .parallax-bg{
-        background-image: url("../assets/about.jpg");
+        background-image: url("../assets/about1.webp");
         background-attachment: fixed;
         background-size: cover;
         background-position: center;    
     }
+}
+
+@keyframes dotGlow {
+  0%, 100% {
+    opacity: 0.25;
+  
+  }
+  50% {
+    opacity: .75;
+   
+  }
+}
+
+.dot-background {
+  animation: dotGlow 4s ease-in-out infinite;
 }

@@ -15,7 +15,7 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-blue-950/20 backdrop-blur-lg border-b border-purple-500"
+      className="fixed top-0 left-0 right-0 z-50 bg-blue-950/20 backdrop-blur-lg border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-2 lg:px-6">
         <div className="flex items-center justify-between">
@@ -46,7 +46,7 @@ const Navbar = () => {
           {/* CTA BUTTON */}
           <Link
             href="tel:+919633443047"
-            className="hidden lg:inline-block text-white text-md px-6 py-2 bg-linear-to-br from-purple-400 to-cyan-400 rounded-xl uppercase"
+            className="hidden lg:inline-block text-white text-md px-6 py-2 bg-linear-to-br from-cyan-700 to-cyan-400 rounded-xl uppercase hover:from-cyan-600 via-75% hover:to-purple-600 transitionf font-bold cursor-pointer text-center"
           >
             connect me
           </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
 
             <a
               href="tel:+919633443047"
-              className="md:hidden text-white text-lg px-6 py-2 bg-gradient-to-br from-purple-400 to-cyan-400 rounded-xl uppercase"
+              className="md:hidden text-white text-lg px-6 py-2 bg-linear-to-br from-cyan-700 to-cyan-400 rounded-xl uppercase"
             >
               Let's work together
             </a>

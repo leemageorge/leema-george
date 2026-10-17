@@ -30,14 +30,15 @@ export const navLinks = [
 
         },
     ]
+import Unique from "../assets/unique.webp"
 import Starc from "../assets/starc.webp"
 import Guru from "../assets/gurupavanapuram.webp"
 import Mtech from "../assets/mtechlab.webp"
 import Antz from "../assets/antz.png"
-
-
-export const projectsList = [
-  {
+import VastuConsultant from "../assets/vastuconsultant.webp"
+import ecommerceWebsite from "../assets/ecommerce.webp"
+export const liveprojectsList = [
+ {
     title: "Starc Steel Windows & Doors",
     image: Starc,
     desc: "Responsive business website showcasing steel window and door products with a clean and structured layout.",
@@ -52,6 +53,25 @@ export const projectsList = [
     ],
     link:"https://www.starcsteelwindow.com/"
   },
+  {
+  title: "Unique Bags",
+  image: Unique,
+  desc: "A responsive business website showcasing a wide range of bags, including travel bags, college bags, camera bags, and musical instrument bags.",
+  tech: ["Next.js", "Tailwind CSS"],
+  highlights: [
+    "Fully responsive design",
+    "Product category showcase",
+    "Smooth animations",
+    "Page transitions",
+    "Parallax effects",
+    "SEO optimization",
+    "Performance-focused development"
+  ],
+  link: "https://www.uniquebags.co.in/"
+},
+]
+export const demoprojectsList = [
+ 
   {
     title: "Gurupavanapuram",
     image: Guru,
@@ -88,7 +108,31 @@ export const projectsList = [
       "Simple UI",
       "User-friendly design"
     ],
-    link:"https://antzmedia.netlify.app/"
+    link:"https://smart-digital-card.netlify.app/"
+  },
+   {
+    title: "Vastu Consultant",
+    image: VastuConsultant,
+    desc: "Clean and responsive website designed to showcase media content in a structured way.",
+    tech: ["React.js", "Tailwind CSS"],
+    highlights: [
+      "Responsive layout",
+      "Simple UI",
+      "User-friendly design"
+    ],
+    link:"https://vastu-architect.netlify.app/"
+  },
+   {
+    title: "LeeTick",
+    image: ecommerceWebsite,
+    desc: "Clean and responsive website designed to showcase media content in a structured way.",
+    tech: ["React.js", "Tailwind CSS"],
+    highlights: [
+      "Responsive layout",
+      "Simple UI",
+      "User-friendly design"
+    ],
+    link:"https://leetick-eccomercedemo.netlify.app/"
   },
   
 ];
@@ -122,7 +166,7 @@ export const feedback = [
   feedback: "“She did a great job on my website. The design looks clean and everything works properly. It was easy to communicate and make changes when needed. I liked how the final result came out. Overall, I’m really happy with it."
 },
 {
-  project: "Antz Media",
+  project: "Unique Bags",
   feedback: "“She worked on my website as part of gaining experience, but she handled everything really well. Whatever I suggested, she understood and implemented it properly. She was also punctual and completed the work on time. Overall, I had a good experience working with her.”"
 },
 {
@@ -135,17 +179,19 @@ import Facebook from "../assets/facebook.svg"
 import Linkedin from "../assets/linkedin.svg"
 import Github from "../assets/github.svg"
 import insta from "../assets/insta.svg"
+
+
 export const socialMediaIcons = [
     {
       name:"linkedin",
       icon:Linkedin,
       url:"https://www.linkedin.com/in/leema-george-a51472273/"
     },
-    //  {
-    //   name:"insta",
-    //   icon:insta,
-    //   url:"https://www.linkedin.com/in/leema-george-a51472273/"
-    // },
+     {
+      name:"insta",
+      icon:insta,
+      url:"https://www.linkedin.com/in/leema-george-a51472273/"
+    },
     {
       name:"github",
       icon:Github,

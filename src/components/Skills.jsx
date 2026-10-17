@@ -19,13 +19,14 @@ const Skills = () => {
     text-center
     text-[50px] lg:text-[100px]
     font-serif uppercase
-    text-white/20
+ 
+    text-transparent
     pointer-events-none
     select-none
-    blur-[1px]
+    blur-[0.5px]
     tracking-widest
     z-0
-    [-webkit-text-stroke:2px_rgba(255,255,255,0.4)]
+    [-webkit-text-stroke:1px_rgba(255,255,255,0.9)]
   "
         >
           skills i have

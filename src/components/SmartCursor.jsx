@@ -46,21 +46,21 @@ const SmartCursor = () => {
     default: {
       x: mousePosition.x - 10,
       y: mousePosition.y - 10,
-      width: 15,
-      height: 15,
+      width: 8,
+      height: 8,
       backgroundColor: "rgb(34, 211, 238, 0.8)",
       scale: 1,
     },
-    hover: {
-      x: mousePosition.x - 50,
-      y: mousePosition.y - 50,
-      width: 100,
-      height: 100,
-      backgroundColor: "rgba(255,255,255,0.1)",
-      border: "1px solid rgb(34, 211, 238, 0.8)",
-      scale: 1.2,
-      boxShadow: "0 0 25px rgb(34, 211, 238, 0.8)",
-    },
+    // hover: {
+    //   x: mousePosition.x - 50,
+    //   y: mousePosition.y - 50,
+    //   width: 100,
+    //   height: 100,
+    //   backgroundColor: "rgba(255,255,255,0.1)",
+    //   border: "1px solid rgb(34, 211, 238, 0.8)",
+    //   scale: 1.2,
+    //   boxShadow: "0 0 25px rgb(34, 211, 238, 0.8)",
+    // },
   };
 
   return (

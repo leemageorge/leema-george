@@ -23,17 +23,16 @@ const luckiest = Luckiest_Guy({
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-10 md:py-30">
-      {/* Background */}
-      <Image
-        src={herobg}
-        alt="herobg"
-        fill
-        className="absolute inset-0 -z-10 object-cover"
-        priority
+       <div className="absolute inset-0 bg-linear-to-br from-blue-950 via-black to-cyan-800  z-0"></div>
+         <div
+        aria-hidden="true"
+        className="dot-background absolute inset-0 z-10pointer-events-none 
+        [background-image:radial-gradient(circle,rgba(34,211,238,0.4)_1px,transparent_1.5px)]
+        [background-size:16px_16px]"
       />
-      {/* <div className="absolute bottom-0 left-2">
-        <Image src={bulb} alt="bulb" width={250} height={250} />
-      </div> */}
+      <div className="absolute w-72 h-72 rounded-full bg-white/15  -bottom-26 right-48 " />
+       <div className="absolute w-72 h-72 rounded-full bg-white/10  -top-32 left-38 " />
+    
       <div className=" relative container max-w-7xl mx-auto  px-10 lg:px-6  ">
         <div className="hidden absolute bottom-0 left-9 lg:flex flex-col items-center gap-9 opacity-50 text-white">
           <div className="w-1 h-20 bg-white opacity-60"></div>
@@ -59,7 +58,7 @@ const Hero = () => {
         {/* LEFT CONTENT */}
         <div className="space-y-5 text-center">
           <motion.h3
-            className={`${caveat.className} text-4xl md:text-6xl text-white italic`}
+            className={`${caveat.className} text-4xl md:text-6xl text-white/20 italic`}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -68,13 +67,13 @@ const Hero = () => {
           </motion.h3>
 
           <h1
-            className={`${luckiest.className} text-5xl md:text-8xl uppercase text-white tracking-wider water-text`}
+            className={`${luckiest.className} text-5xl md:text-8xl uppercase  water-text`}
           >
-            Leema George
+            Leema <span className="text-white">George</span> 
           </h1>
 
           <motion.h3
-            className="text-2xl md:text-4xl font-black uppercase bg-linear-to-r from-purple-400 via-cyan-200 to-purple-600 bg-clip-text text-transparent"
+            className="text-2xl md:text-4xl font-black uppercase text-white "
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -86,15 +85,15 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <p>Hands-on Experience Building Web Applications</p>
-            <p>React & Next.js Developer</p>
+            {/* <p>Hands-on Experience Building Web Applications</p> */}
+            <p className="text-white/80">React & Next.js Developer</p>
           </motion.div>
-          <div className="flex flex-col sm:flex-row gap-10 justify-center pt-3 relative z-50">
+          <div className="flex flex-col items-center sm:flex-row gap-10 justify-center pt-3 relative z-50">
             <Link
               href="https://wa.me/919633443047"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-12 py-6 md:px-16  md:py-12 text-xl tracking-wider bg-linear-to-br from-cyan-500/60 to-purple-500/60 font-bold uppercase text-white rounded-full hover:from-cyan-600 via-75% hover:to-purple-600 transition inline-block cursor-pointer text-center"
+              className="px-12 py-6 md:px-10 md:py-6 text-xl tracking-wider bg-linear-to-br from-cyan-500 to-cyan-700 font-bold uppercase text-white rounded-full hover:from-cyan-600 via-75% hover:to-purple-600 transition inline-block cursor-pointer text-center"
             >
               Let's Connect →
             </Link>
@@ -103,7 +102,7 @@ const Hero = () => {
             <Link
               href="/projects"
               target="_blank"
-              className="px-12 py-6 md:px-16 md:py-12 border border-white text-xl tracking-wider text-white rounded-full font-bold uppercase transition inline-block cursor-pointer text-center bg-white/10 hover:bg-clip-text hover:text-transparent hover:bg-linear-to-br hover:from-cyan-400 hover:to-purple-400"
+              className="px-12 py-6 md:px-10 md:py-6 border border-white text-xl tracking-wider text-white rounded-full font-bold uppercase transition inline-block cursor-pointer text-center bg-black hover:bg-clip-text hover:text-transparent hover:bg-linear-to-br hover:from-cyan-400 hover:to-purple-400 hover:bg-white/10"
             >
               View My Works →
             </Link>
