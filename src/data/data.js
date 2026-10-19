@@ -123,18 +123,18 @@ export const demoprojectsList = [
     ],
     link:"https://vastu-architect.netlify.app/"
   },
-   {
-    title: "LeeTick",
-    image: ecommerceWebsite,
-    desc: "Feature-rich e-commerce website built to deliver an engaging shopping experience with intuitive navigation, attractive product displays, and a smooth purchasing journey..",
-    tech: ["React.js", "Tailwind CSS"],
-    highlights: [
-      "Responsive layout",
-      "Simple UI",
-      "User-friendly design"
-    ],
-    link:"https://leetick-eccomercedemo.netlify.app/"
-  },
+  //  {
+  //   title: "LeeTick",
+  //   image: ecommerceWebsite,
+  //   desc: "Feature-rich e-commerce website built to deliver an engaging shopping experience with intuitive navigation, attractive product displays, and a smooth purchasing journey..",
+  //   tech: ["React.js", "Tailwind CSS"],
+  //   highlights: [
+  //     "Responsive layout",
+  //     "Simple UI",
+  //     "User-friendly design"
+  //   ],
+  //   link:"https://leetick-eccomercedemo.netlify.app/"
+  // },
   
 ];
 
