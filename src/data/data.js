@@ -148,14 +148,22 @@ export const skillCategory = [
     items: ["Node.js", "Express.js", "REST APIs", "MongoDB"]
   },
   {
+    title: "WordPress",
+    items: ["WordPress", "Theme Customization", "Plugin Integration"]
+  },
+  {
+    title: "SEO",
+    items: ["Keyword Research", "On-Page SEO", "Off-Page SEO", "Technical SEO"]
+  },
+  {
     title: "Tools & Workflow",
     items: ["Git", "GitHub", "Figma", "VS Code"]
   },
   {
     title: "Core Concepts",
-    items: ["Responsive Design", "UI/UX Principles", "SEO Basics"]
+    items: ["Responsive Design", "UI/UX Principles"]
   }
-]
+];
 
 export const feedback = [
     {
